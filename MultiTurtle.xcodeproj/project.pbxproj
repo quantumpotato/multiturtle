@@ -133,6 +133,14 @@
 		BF7F7638162B578400A74F40 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F7637162B578400A74F40 /* AppDelegate.m */; };
 		BF7F763B162B578400A74F40 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F763A162B578400A74F40 /* HelloWorldLayer.m */; };
 		BF7F763E162B578400A74F40 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F763D162B578400A74F40 /* IntroLayer.m */; };
+		BF7F764D162B584200A74F40 /* VRBoundaryFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F7646162B584200A74F40 /* VRBoundaryFrame.m */; };
+		BF7F764E162B584200A74F40 /* VRDrawHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F7648162B584200A74F40 /* VRDrawHelpers.m */; };
+		BF7F764F162B584200A74F40 /* VRGameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F764A162B584200A74F40 /* VRGameObject.m */; };
+		BF7F7650162B584200A74F40 /* VRGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F764C162B584200A74F40 /* VRGeometry.m */; };
+		BF7F7653162B588500A74F40 /* turtlesmallsize1.png in Resources */ = {isa = PBXBuildFile; fileRef = BF7F7652162B588500A74F40 /* turtlesmallsize1.png */; };
+		BF7F7656162B589300A74F40 /* SMbird1a2F.png in Resources */ = {isa = PBXBuildFile; fileRef = BF7F7654162B589300A74F40 /* SMbird1a2F.png */; };
+		BF7F7657162B589300A74F40 /* SMBird1b84F.png in Resources */ = {isa = PBXBuildFile; fileRef = BF7F7655162B589300A74F40 /* SMBird1b84F.png */; };
+		BF7F765E162B595900A74F40 /* Turtle.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F765D162B595900A74F40 /* Turtle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -398,6 +406,19 @@
 		BF7F763A162B578400A74F40 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		BF7F763C162B578400A74F40 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		BF7F763D162B578400A74F40 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		BF7F7645162B584200A74F40 /* VRBoundaryFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRBoundaryFrame.h; sourceTree = "<group>"; };
+		BF7F7646162B584200A74F40 /* VRBoundaryFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRBoundaryFrame.m; sourceTree = "<group>"; };
+		BF7F7647162B584200A74F40 /* VRDrawHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRDrawHelpers.h; sourceTree = "<group>"; };
+		BF7F7648162B584200A74F40 /* VRDrawHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRDrawHelpers.m; sourceTree = "<group>"; };
+		BF7F7649162B584200A74F40 /* VRGameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRGameObject.h; sourceTree = "<group>"; };
+		BF7F764A162B584200A74F40 /* VRGameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRGameObject.m; sourceTree = "<group>"; };
+		BF7F764B162B584200A74F40 /* VRGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRGeometry.h; sourceTree = "<group>"; };
+		BF7F764C162B584200A74F40 /* VRGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRGeometry.m; sourceTree = "<group>"; };
+		BF7F7652162B588500A74F40 /* turtlesmallsize1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtlesmallsize1.png; sourceTree = "<group>"; };
+		BF7F7654162B589300A74F40 /* SMbird1a2F.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SMbird1a2F.png; sourceTree = "<group>"; };
+		BF7F7655162B589300A74F40 /* SMBird1b84F.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SMBird1b84F.png; sourceTree = "<group>"; };
+		BF7F765C162B595900A74F40 /* Turtle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Turtle.h; sourceTree = "<group>"; };
+		BF7F765D162B595900A74F40 /* Turtle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Turtle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -423,6 +444,8 @@
 		BF7F749D162B578200A74F40 = {
 			isa = PBXGroup;
 			children = (
+				BF7F765B162B594500A74F40 /* Turtle Classes */,
+				BF7F7644162B583700A74F40 /* VR */,
 				BF7F74BE162B578200A74F40 /* MultiTurtle */,
 				BF7F74AB162B578200A74F40 /* Frameworks */,
 				BF7F74A9162B578200A74F40 /* Products */,
@@ -472,6 +495,7 @@
 		BF7F74BF162B578200A74F40 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BF7F7651162B587E00A74F40 /* Game Art */,
 				BF7F74C0162B578200A74F40 /* Default.png */,
 				BF7F74C2162B578200A74F40 /* Default-Landscape~ipad.png */,
 				BF7F74C4162B578200A74F40 /* fps_images.png */,
@@ -832,6 +856,40 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BF7F7644162B583700A74F40 /* VR */ = {
+			isa = PBXGroup;
+			children = (
+				BF7F7645162B584200A74F40 /* VRBoundaryFrame.h */,
+				BF7F7646162B584200A74F40 /* VRBoundaryFrame.m */,
+				BF7F7647162B584200A74F40 /* VRDrawHelpers.h */,
+				BF7F7648162B584200A74F40 /* VRDrawHelpers.m */,
+				BF7F7649162B584200A74F40 /* VRGameObject.h */,
+				BF7F764A162B584200A74F40 /* VRGameObject.m */,
+				BF7F764B162B584200A74F40 /* VRGeometry.h */,
+				BF7F764C162B584200A74F40 /* VRGeometry.m */,
+			);
+			name = VR;
+			sourceTree = "<group>";
+		};
+		BF7F7651162B587E00A74F40 /* Game Art */ = {
+			isa = PBXGroup;
+			children = (
+				BF7F7652162B588500A74F40 /* turtlesmallsize1.png */,
+				BF7F7654162B589300A74F40 /* SMbird1a2F.png */,
+				BF7F7655162B589300A74F40 /* SMBird1b84F.png */,
+			);
+			name = "Game Art";
+			sourceTree = "<group>";
+		};
+		BF7F765B162B594500A74F40 /* Turtle Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BF7F765C162B595900A74F40 /* Turtle.h */,
+				BF7F765D162B595900A74F40 /* Turtle.m */,
+			);
+			name = "Turtle Classes";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -895,6 +953,9 @@
 				BF7F74D5162B578200A74F40 /* Icon@2x.png in Resources */,
 				BF7F74D8162B578200A74F40 /* iTunesArtwork in Resources */,
 				BF7F7616162B578400A74F40 /* ChangeLog in Resources */,
+				BF7F7653162B588500A74F40 /* turtlesmallsize1.png in Resources */,
+				BF7F7656162B589300A74F40 /* SMbird1a2F.png in Resources */,
+				BF7F7657162B589300A74F40 /* SMBird1b84F.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1009,6 +1070,11 @@
 				BF7F7638162B578400A74F40 /* AppDelegate.m in Sources */,
 				BF7F763B162B578400A74F40 /* HelloWorldLayer.m in Sources */,
 				BF7F763E162B578400A74F40 /* IntroLayer.m in Sources */,
+				BF7F764D162B584200A74F40 /* VRBoundaryFrame.m in Sources */,
+				BF7F764E162B584200A74F40 /* VRDrawHelpers.m in Sources */,
+				BF7F764F162B584200A74F40 /* VRGameObject.m in Sources */,
+				BF7F7650162B584200A74F40 /* VRGeometry.m in Sources */,
+				BF7F765E162B595900A74F40 /* Turtle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
