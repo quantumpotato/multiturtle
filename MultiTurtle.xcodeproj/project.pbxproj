@@ -141,6 +141,8 @@
 		BF7F7656162B589300A74F40 /* SMbird1a2F.png in Resources */ = {isa = PBXBuildFile; fileRef = BF7F7654162B589300A74F40 /* SMbird1a2F.png */; };
 		BF7F7657162B589300A74F40 /* SMBird1b84F.png in Resources */ = {isa = PBXBuildFile; fileRef = BF7F7655162B589300A74F40 /* SMBird1b84F.png */; };
 		BF7F765E162B595900A74F40 /* Turtle.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F765D162B595900A74F40 /* Turtle.m */; };
+		BF7F7661162B5A5500A74F40 /* TurtleState.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F7660162B5A5500A74F40 /* TurtleState.m */; };
+		BF7F7664162B5A7100A74F40 /* FloatingState.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F7663162B5A7100A74F40 /* FloatingState.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -419,6 +421,10 @@
 		BF7F7655162B589300A74F40 /* SMBird1b84F.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SMBird1b84F.png; sourceTree = "<group>"; };
 		BF7F765C162B595900A74F40 /* Turtle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Turtle.h; sourceTree = "<group>"; };
 		BF7F765D162B595900A74F40 /* Turtle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Turtle.m; sourceTree = "<group>"; };
+		BF7F765F162B5A5500A74F40 /* TurtleState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurtleState.h; sourceTree = "<group>"; };
+		BF7F7660162B5A5500A74F40 /* TurtleState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurtleState.m; sourceTree = "<group>"; };
+		BF7F7662162B5A7100A74F40 /* FloatingState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatingState.h; sourceTree = "<group>"; };
+		BF7F7663162B5A7100A74F40 /* FloatingState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloatingState.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -886,6 +892,10 @@
 			children = (
 				BF7F765C162B595900A74F40 /* Turtle.h */,
 				BF7F765D162B595900A74F40 /* Turtle.m */,
+				BF7F765F162B5A5500A74F40 /* TurtleState.h */,
+				BF7F7660162B5A5500A74F40 /* TurtleState.m */,
+				BF7F7662162B5A7100A74F40 /* FloatingState.h */,
+				BF7F7663162B5A7100A74F40 /* FloatingState.m */,
 			);
 			name = "Turtle Classes";
 			sourceTree = "<group>";
@@ -1075,6 +1085,8 @@
 				BF7F764F162B584200A74F40 /* VRGameObject.m in Sources */,
 				BF7F7650162B584200A74F40 /* VRGeometry.m in Sources */,
 				BF7F765E162B595900A74F40 /* Turtle.m in Sources */,
+				BF7F7661162B5A5500A74F40 /* TurtleState.m in Sources */,
+				BF7F7664162B5A7100A74F40 /* FloatingState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
