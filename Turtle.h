@@ -24,6 +24,8 @@
 @property (strong, nonatomic) BoostingState *boosting;
 @property (nonatomic) NSInteger charge;
 @property (readonly, nonatomic) NSInteger maxCharge;
+@property (nonatomic) NSInteger score;
+@property (nonatomic) NSInteger mistakes;
 
 - (void)changeState:(TurtleState *)s;
 

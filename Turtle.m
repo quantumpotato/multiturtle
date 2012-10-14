@@ -16,6 +16,8 @@
 @synthesize floating = _floating;
 @synthesize charging = _charging;
 @synthesize boosting = _boosting;
+@synthesize score = _score;
+@synthesize mistakes = _mistakes;
 
 - (id)init {
     self = [super init];

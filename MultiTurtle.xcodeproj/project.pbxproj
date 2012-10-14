@@ -145,6 +145,8 @@
 		BF7F7664162B5A7100A74F40 /* FloatingState.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F7663162B5A7100A74F40 /* FloatingState.m */; };
 		BF7F7667162B623800A74F40 /* ChargingState.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F7666162B623800A74F40 /* ChargingState.m */; };
 		BF7F766A162B627E00A74F40 /* BoostingState.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F7669162B627E00A74F40 /* BoostingState.m */; };
+		BF7F766D162B63C400A74F40 /* MTGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F766C162B63C400A74F40 /* MTGameController.m */; };
+		BF7F7670162B65B800A74F40 /* MultiTurtleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F766F162B65B800A74F40 /* MultiTurtleLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -431,6 +433,10 @@
 		BF7F7666162B623800A74F40 /* ChargingState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargingState.m; sourceTree = "<group>"; };
 		BF7F7668162B627E00A74F40 /* BoostingState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoostingState.h; sourceTree = "<group>"; };
 		BF7F7669162B627E00A74F40 /* BoostingState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoostingState.m; sourceTree = "<group>"; };
+		BF7F766B162B63C400A74F40 /* MTGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTGameController.h; sourceTree = "<group>"; };
+		BF7F766C162B63C400A74F40 /* MTGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTGameController.m; sourceTree = "<group>"; };
+		BF7F766E162B65B800A74F40 /* MultiTurtleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiTurtleLayer.h; sourceTree = "<group>"; };
+		BF7F766F162B65B800A74F40 /* MultiTurtleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiTurtleLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -906,6 +912,10 @@
 				BF7F7666162B623800A74F40 /* ChargingState.m */,
 				BF7F7668162B627E00A74F40 /* BoostingState.h */,
 				BF7F7669162B627E00A74F40 /* BoostingState.m */,
+				BF7F766B162B63C400A74F40 /* MTGameController.h */,
+				BF7F766C162B63C400A74F40 /* MTGameController.m */,
+				BF7F766E162B65B800A74F40 /* MultiTurtleLayer.h */,
+				BF7F766F162B65B800A74F40 /* MultiTurtleLayer.m */,
 			);
 			name = "Turtle Classes";
 			sourceTree = "<group>";
@@ -1099,6 +1109,8 @@
 				BF7F7664162B5A7100A74F40 /* FloatingState.m in Sources */,
 				BF7F7667162B623800A74F40 /* ChargingState.m in Sources */,
 				BF7F766A162B627E00A74F40 /* BoostingState.m in Sources */,
+				BF7F766D162B63C400A74F40 /* MTGameController.m in Sources */,
+				BF7F7670162B65B800A74F40 /* MultiTurtleLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
