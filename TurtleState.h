@@ -16,6 +16,8 @@
 
 - (void)tick;
 - (float)speed;
+- (void)touchDown;
+- (void)touchUp;
 
 - (id)initWithTurtle:(Turtle *)turtle;
 

@@ -26,4 +26,12 @@
     return 0;
 }
 
+- (void)touchDown {
+    
+}
+
+- (void)touchUp {
+    
+}
+
 @end

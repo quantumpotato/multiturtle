@@ -14,6 +14,8 @@
 @synthesize sprite = _sprite;
 @synthesize state = _state;
 @synthesize floating = _floating;
+@synthesize charging = _charging;
+@synthesize boosting = _boosting;
 
 - (id)init {
     self = [super init];
@@ -36,6 +38,14 @@
 
 - (NSInteger)maxCharge {
     return 130;
+}
+
+- (void)touchDown {
+    [self.state touchDown];
+}
+
+- (void)touchUp {
+    [self.state touchUp];
 }
 
 @end

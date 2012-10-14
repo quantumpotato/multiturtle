@@ -10,6 +10,8 @@
 #import "cocos2d.h"
 #import "TurtleState.h"
 #import "FloatingState.h"
+#import "ChargingState.h"
+#import "BoostingState.h"
 
 @interface Turtle : NSObject
 
@@ -18,6 +20,8 @@
 @property (strong, nonatomic) CCSprite *sprite;
 @property (strong, nonatomic) TurtleState *state;
 @property (strong, nonatomic) FloatingState *floating;
+@property (strong, nonatomic) ChargingState *charging;
+@property (strong, nonatomic) BoostingState *boosting;
 @property (nonatomic) NSInteger charge;
 @property (readonly, nonatomic) NSInteger maxCharge;
 

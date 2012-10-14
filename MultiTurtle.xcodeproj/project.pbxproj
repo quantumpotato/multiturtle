@@ -143,6 +143,8 @@
 		BF7F765E162B595900A74F40 /* Turtle.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F765D162B595900A74F40 /* Turtle.m */; };
 		BF7F7661162B5A5500A74F40 /* TurtleState.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F7660162B5A5500A74F40 /* TurtleState.m */; };
 		BF7F7664162B5A7100A74F40 /* FloatingState.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F7663162B5A7100A74F40 /* FloatingState.m */; };
+		BF7F7667162B623800A74F40 /* ChargingState.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F7666162B623800A74F40 /* ChargingState.m */; };
+		BF7F766A162B627E00A74F40 /* BoostingState.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F7669162B627E00A74F40 /* BoostingState.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -425,6 +427,10 @@
 		BF7F7660162B5A5500A74F40 /* TurtleState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurtleState.m; sourceTree = "<group>"; };
 		BF7F7662162B5A7100A74F40 /* FloatingState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatingState.h; sourceTree = "<group>"; };
 		BF7F7663162B5A7100A74F40 /* FloatingState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloatingState.m; sourceTree = "<group>"; };
+		BF7F7665162B623800A74F40 /* ChargingState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargingState.h; sourceTree = "<group>"; };
+		BF7F7666162B623800A74F40 /* ChargingState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargingState.m; sourceTree = "<group>"; };
+		BF7F7668162B627E00A74F40 /* BoostingState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoostingState.h; sourceTree = "<group>"; };
+		BF7F7669162B627E00A74F40 /* BoostingState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoostingState.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -896,6 +902,10 @@
 				BF7F7660162B5A5500A74F40 /* TurtleState.m */,
 				BF7F7662162B5A7100A74F40 /* FloatingState.h */,
 				BF7F7663162B5A7100A74F40 /* FloatingState.m */,
+				BF7F7665162B623800A74F40 /* ChargingState.h */,
+				BF7F7666162B623800A74F40 /* ChargingState.m */,
+				BF7F7668162B627E00A74F40 /* BoostingState.h */,
+				BF7F7669162B627E00A74F40 /* BoostingState.m */,
 			);
 			name = "Turtle Classes";
 			sourceTree = "<group>";
@@ -1087,6 +1097,8 @@
 				BF7F765E162B595900A74F40 /* Turtle.m in Sources */,
 				BF7F7661162B5A5500A74F40 /* TurtleState.m in Sources */,
 				BF7F7664162B5A7100A74F40 /* FloatingState.m in Sources */,
+				BF7F7667162B623800A74F40 /* ChargingState.m in Sources */,
+				BF7F766A162B627E00A74F40 /* BoostingState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
