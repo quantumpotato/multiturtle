@@ -142,7 +142,7 @@
     if (xo > 150) {
         xo = 150;
     }
-    x+= 150 - (xo * 15);
+    x+= 150 - xo;
     b.l = ccp(-x, height);
     b.speed = speed;
     [self.layer addChild:b];
