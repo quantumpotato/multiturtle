@@ -148,6 +148,7 @@
 		BF7F766D162B63C400A74F40 /* MTGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F766C162B63C400A74F40 /* MTGameController.m */; };
 		BF7F7670162B65B800A74F40 /* MultiTurtleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F766F162B65B800A74F40 /* MultiTurtleLayer.m */; };
 		BF7F7673162BB4D400A74F40 /* Bird.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F7672162BB4D400A74F40 /* Bird.m */; };
+		BF7F7676162BC89A00A74F40 /* BirdSpawner.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F7675162BC89900A74F40 /* BirdSpawner.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -440,6 +441,8 @@
 		BF7F766F162B65B800A74F40 /* MultiTurtleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiTurtleLayer.m; sourceTree = "<group>"; };
 		BF7F7671162BB4D400A74F40 /* Bird.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bird.h; sourceTree = "<group>"; };
 		BF7F7672162BB4D400A74F40 /* Bird.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bird.m; sourceTree = "<group>"; };
+		BF7F7674162BC89900A74F40 /* BirdSpawner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirdSpawner.h; sourceTree = "<group>"; };
+		BF7F7675162BC89900A74F40 /* BirdSpawner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdSpawner.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -921,6 +924,8 @@
 				BF7F766F162B65B800A74F40 /* MultiTurtleLayer.m */,
 				BF7F7671162BB4D400A74F40 /* Bird.h */,
 				BF7F7672162BB4D400A74F40 /* Bird.m */,
+				BF7F7674162BC89900A74F40 /* BirdSpawner.h */,
+				BF7F7675162BC89900A74F40 /* BirdSpawner.m */,
 			);
 			name = "Turtle Classes";
 			sourceTree = "<group>";
@@ -1117,6 +1122,7 @@
 				BF7F766D162B63C400A74F40 /* MTGameController.m in Sources */,
 				BF7F7670162B65B800A74F40 /* MultiTurtleLayer.m in Sources */,
 				BF7F7673162BB4D400A74F40 /* Bird.m in Sources */,
+				BF7F7676162BC89A00A74F40 /* BirdSpawner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1169,6 +1175,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1191,6 +1198,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

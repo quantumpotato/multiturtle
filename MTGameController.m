@@ -15,6 +15,8 @@
 @synthesize layer = _layer;
 @synthesize turtles = _turtles;
 @synthesize birds = _birds;
+@synthesize spawners = _spawners;
+@synthesize rotatingSpawnY = _rotatingSpawnY;
 
 - (void)setupTurtles {
     self.turtles = [NSMutableArray array];
@@ -24,23 +26,36 @@
         t.l = ccp(500 + i * 90, 0);
         t.playerNumber = i;
         [self.turtles addObject:t];
+        [t release];
     }
 }
 
 - (void)setupBirds {
     self.birds = [NSMutableArray array];
+    self.spawners = [NSMutableArray array];
     for (int i = 0; i < 4; i++) {
-        for (int ii = 0; ii < 2; ii++) {
-            Bird *b = [[Bird alloc] init];
-            [self.layer addChild:b];
-            float offX = arc4random() % 500;
-            b.turtleIndex = i;
-            offX += 600;
-            b.l = ccp(-offX - (ii*400) - (i * 400), 750 - (140 * i));
-            b.speed = 3;
-            [self.birds addObject:b];
+        for (int ii = 0; ii < 2; ii++){
+            BirdSpawner *s = [[BirdSpawner alloc] init];
+            s.delegate = self;
+            s.turtle = self.turtles[i];
+            s.countdown *= (ii + 1);
+            s.countdown += 300;
+            [self.spawners addObject:s];
+            [s release];
         }
     }
+//    for (int i = 0; i < 4; i++) {
+//        for (int ii = 0; ii < 2; ii++) {
+//            Bird *b = [[Bird alloc] init];
+//            [self.layer addChild:b];
+//            float offX = arc4random() % 500;
+//            b.turtleIndex = i;
+//            offX += 600;
+//            b.l = ccp(-offX - (ii*400) - (i * 400), 750 - (140 * i));
+//            b.speed = 3;
+//            [self.birds addObject:b];
+//        }
+//    }
 }
 
 - (id)initWithLayer:(CCLayer *)layer {
@@ -61,18 +76,18 @@
     for (Turtle *t in self.turtles) {
         [t tick];
         if (t.l.y > 750) {
-            t.l = ccp(t.l.x, -50);
-            t.score++;
+            [t scored];
         }
     }
 }
 
 - (void)birdLoop {
+    NSMutableArray *finishedBirds = [NSMutableArray array];
     for (int i = 0; i < self.birds.count; i++) {
         Bird *b = self.birds[i];
         [b tick];
         if (b.l.x > 1100) {
-            [b resetForTurtle:self.turtles[b.turtleIndex]];
+            [finishedBirds addObject:b];
         }
         
         for (Turtle *t in self.turtles) {
@@ -80,13 +95,21 @@
                 [t madeMistake];
             }
         }
-        
+    }
+    
+    [self.birds removeObjectsInArray:finishedBirds];
+}
+
+- (void)spawnerLoop {
+    for (BirdSpawner *s in self.spawners) {
+        [s tick];
     }
 }
 
 - (void)tick {
     [self turtleLoop];
     [self birdLoop];
+    [self spawnerLoop];
 }
 
 - (NSInteger)score {
@@ -95,6 +118,32 @@
         s+= t.score;
     }
     return s;
+}
+
+- (void)spawnBirdForTurtle:(Turtle *)turtle withSpeed:(float)speed {
+    float height = self.rotatingSpawnY + 200;
+    height += arc4random() % 50;
+    if (height > 500) {
+        height -= 500;
+    }
+    height += 200;
+    self.rotatingSpawnY+= 100;
+    if (self.rotatingSpawnY > 600) {
+        self.rotatingSpawnY -= 600;
+    }
+    
+    Bird *b = [[Bird alloc] init];
+    NSInteger x = arc4random() % 700;
+    NSInteger xo = turtle.score;
+    if (xo > 150) {
+        xo = 150;
+    }
+    x+= 150 - (xo * 15);
+    b.l = ccp(-x, height);
+    b.speed = speed;
+    [self.layer addChild:b];
+    [self.birds addObject:b];
+    [b release];
 }
 
 - (void)addTouch:(CGPoint)l {

@@ -76,6 +76,13 @@
     }
 }
 
+- (void)scored {
+    self.l = ccp(self.l.x, -50);
+    self.score++;
+    self.charge = 0;
+    [self setState:self.floating];
+}
+
 - (void)changeState:(TurtleState *)s {
     self.state = s;
 }
@@ -106,6 +113,15 @@
 
 - (void)touchUp {
     [self.state touchUp];
+}
+
+- (void)dealloc {
+    [self.sprite removeFromParentAndCleanup:YES];
+    self.sprite = nil;
+    [_floating release];
+    [_boosting release];
+    [_charging release];
+    [super dealloc];
 }
 
 @end

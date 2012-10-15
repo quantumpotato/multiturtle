@@ -52,4 +52,10 @@
     self.speed += 4;
 }
 
+- (void)dealloc {
+    [self.sprite removeFromParentAndCleanup:YES];
+    self.sprite = nil;
+    [super dealloc];
+}
+
 @end

@@ -37,5 +37,6 @@
 - (void)touchUp;
 - (void)touchDown;
 - (void)madeMistake;
+- (void)scored;
 
 @end
