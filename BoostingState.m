@@ -12,12 +12,10 @@
 @implementation BoostingState
 
 - (void)tick {
-    if (self.turtle.charge > 0) {
-        self.turtle.charge-= 8;
-        if (self.turtle.charge < 0) {
-            self.turtle.charge = 0;
-            [self.turtle changeState:self.turtle.floating];
-        }
+    self.turtle.charge-= 8;
+    if (self.turtle.charge < 0) {
+        self.turtle.charge = 0;
+        [self.turtle changeState:self.turtle.floating];
     }
 }
 

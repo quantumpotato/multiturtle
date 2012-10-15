@@ -18,6 +18,7 @@
 @synthesize boosting = _boosting;
 @synthesize score = _score;
 @synthesize mistakes = _mistakes;
+@synthesize cloud = _cloud;
 
 - (id)init {
     self = [super init];
@@ -31,7 +32,12 @@
     return self;
 }
 
+- (void)makeCloud:(NSString *)cloudFile {
+    self.cloud = [[CCSprite alloc] initWithFile:cloudFile];
+}
+
 - (void)tick {
+    self.cloud.position = self.l;
     self.sprite.position = self.l;
     self.l = ccp(self.l.x, self.l.y + [self.state speed]);
     [self.state tick];

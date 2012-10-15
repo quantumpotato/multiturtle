@@ -26,6 +26,7 @@
 @property (readonly, nonatomic) NSInteger maxCharge;
 @property (nonatomic) NSInteger score;
 @property (nonatomic) NSInteger mistakes;
+@property (strong, nonatomic) CCSprite *cloud;
 
 - (void)tick;
 - (void)changeState:(TurtleState *)s;
