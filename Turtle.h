@@ -28,6 +28,7 @@
 @property (nonatomic) NSInteger mistakes;
 @property (strong, nonatomic) CCSprite *cloud;
 @property (nonatomic) NSInteger playerNumber;
+@property (nonatomic) BOOL wantsToBoost;
 
 @property (nonatomic) BOOL playing;
 

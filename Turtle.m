@@ -22,6 +22,7 @@
 @synthesize cloud = _cloud;
 @synthesize playerNumber = _playerNumber;
 @synthesize playing = _playing;
+@synthesize wantsToBoost = _wantsToBoost;
 
 - (id)init {
     self = [super init];

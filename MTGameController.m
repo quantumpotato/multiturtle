@@ -36,7 +36,7 @@
             float offX = arc4random() % 500;
             b.turtleIndex = i;
             offX += 600;
-            b.l = ccp(-offX - (ii*400), 750 - (140 * i));
+            b.l = ccp(-offX - (ii*400) - (i * 400), 750 - (140 * i));
             b.speed = 3;
             [self.birds addObject:b];
         }

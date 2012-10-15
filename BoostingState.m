@@ -12,7 +12,7 @@
 @implementation BoostingState
 
 - (void)tick {
-    self.turtle.charge-= 8;
+    self.turtle.charge-= 4;
     if (self.turtle.charge < 0) {
         self.turtle.charge = 0;
         [self.turtle changeState:self.turtle.floating];
@@ -20,11 +20,15 @@
 }
 
 - (float)speed {
-    return 27;
+    return 15;
 }
 
 - (void)touchDown {
-    [self.turtle changeState:self.turtle.charging];
+    self.turtle.wantsToBoost = YES;
+}
+
+- (void)touchUp {
+    self.turtle.wantsToBoost = NO;
 }
 
 @end

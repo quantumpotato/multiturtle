@@ -12,10 +12,14 @@
 @implementation FloatingState
 
 - (void)tick {
+    if (self.turtle.wantsToBoost) {
+        [self.turtle changeState:self.turtle.charging];
+        self.turtle.wantsToBoost = NO;
+    }
 }
 
 - (float)speed {
-    return 3;
+    return 1;
 }
 
 - (void)touchDown {
