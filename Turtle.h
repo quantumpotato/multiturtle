@@ -13,7 +13,7 @@
 #import "ChargingState.h"
 #import "BoostingState.h"
 
-@interface Turtle : NSObject
+@interface Turtle : CCNode
 
 @property (nonatomic) CGPoint l;
 @property (nonatomic) float speed;
@@ -27,6 +27,7 @@
 @property (nonatomic) NSInteger score;
 @property (nonatomic) NSInteger mistakes;
 @property (strong, nonatomic) CCSprite *cloud;
+@property (nonatomic) NSInteger playerNumber;
 
 - (void)tick;
 - (void)changeState:(TurtleState *)s;

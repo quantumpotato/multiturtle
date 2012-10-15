@@ -7,6 +7,7 @@
 //
 
 #import "Turtle.h"
+#import "cocos2d.h"
 
 @implementation Turtle
 @synthesize speed = _speed;
@@ -19,6 +20,7 @@
 @synthesize score = _score;
 @synthesize mistakes = _mistakes;
 @synthesize cloud = _cloud;
+@synthesize playerNumber = _playerNumber;
 
 - (id)init {
     self = [super init];
@@ -27,6 +29,8 @@
         self.charging   = [[ChargingState alloc] initWithTurtle:self];
         self.boosting   = [[BoostingState alloc] initWithTurtle:self];
         self.sprite = [[CCSprite alloc] initWithFile:@"turtlesmallsize1.png"];
+        [self.sprite setZOrder:-1];
+        [self addChild:self.sprite];
         self.state = self.floating;
     }
     return self;
@@ -36,6 +40,32 @@
     self.cloud = [[CCSprite alloc] initWithFile:cloudFile];
 }
 
+- (void)draw {
+    [super draw];
+    switch (self.playerNumber) {
+        case 0:
+            ccDrawColor4F(1, .1, .1, 1.0);
+            break;
+        case 1:
+            ccDrawColor4F(.5, .5, 0, 1.0);
+            break;
+        case 2:
+            ccDrawColor4F(.8, .4, 0, 1.0);
+            break;
+        case 3:
+            ccDrawColor4F(.2, .7, .4, 1.0);
+            break;
+        default:
+            ccDrawColor4F(1.0, 1.0, 1.0, 1.0);
+    }
+    
+    float maxRadius = 50;
+    float percentage = 1 - ((float)self.charge / (float)self.maxCharge);
+    
+    ccDrawCircle(self.l, percentage * maxRadius, 0, 100, NO);
+}
+
+
 - (void)tick {
     self.cloud.position = self.l;
     self.sprite.position = self.l;
@@ -43,12 +73,13 @@
     [self.state tick];
 }
 
+
 - (void)changeState:(TurtleState *)s {
     self.state = s;
 }
 
 - (NSInteger)maxCharge {
-    return 130;
+    return 70;
 }
 
 - (void)touchDown {

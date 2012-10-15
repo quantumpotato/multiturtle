@@ -17,8 +17,9 @@
     self.turtles = [NSMutableArray array];
     for (int i = 0; i < 4; i++) {
         Turtle *t = [[Turtle alloc] init];
-        [self.layer addChild:t.sprite];
-        t.l = ccp((i + 1) * 200, 0);
+        [self.layer addChild:t];
+        t.l = ccp(500 + i * 90, 0);
+        t.playerNumber = i;
         [self.turtles addObject:t];
     }
 }
@@ -55,29 +56,28 @@
 }
 
 - (void)addTouch:(CGPoint)l {
-    float distance = 1000;
-    Turtle *tt = nil;
-    for (Turtle *t in self.turtles) {
-        float testDist = fabsf(l.x - t.l.x);
-        if (testDist < distance) {
-            distance = testDist;
-            tt = t;
-        }
+    if (l.x < 512 && l.y < 384) {
+        [self.turtles[0] touchDown];
+    } else if (l.x < 512 && l.y > 384) {
+        [self.turtles[1] touchDown];
+    } else if (l.x > 512 && l.y < 384) {
+        [self.turtles[2] touchDown];
+    } else if (l.x > 512 && l.y > 384) {
+        [self.turtles[3] touchDown];
     }
-    [tt touchDown];
+
 }
 
 - (void)endTouch:(CGPoint)l {
-    float distance = 1000;
-    Turtle *tt = nil;
-    for (Turtle *t in self.turtles) {
-        float testDist = fabsf(l.x - t.l.x);
-        if (testDist < distance) {
-            distance = testDist;
-            tt = t;
-        }
+    if (l.x < 512 && l.y < 384) {
+        [self.turtles[0] touchUp];
+    } else if (l.x < 512 && l.y > 384) {
+        [self.turtles[1] touchUp];
+    } else if (l.x > 512 && l.y < 384) {
+        [self.turtles[2] touchUp];
+    } else if (l.x > 512 && l.y > 384) {
+        [self.turtles[3] touchUp];
     }
-    [tt touchUp];
 }
 
 @end
