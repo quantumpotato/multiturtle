@@ -95,9 +95,16 @@
     if (self.score > self.mistakes) {
         self.mistakes++;
     }
+    BOOL reset = NO;
+    if (self.mistakes > self.score) {
+        reset = YES;
+    }
     self.score -= self.mistakes;
     if (self.score < 0) {
         self.score = 0;
+    }
+    if (reset) {
+        self.mistakes = 0;
     }
     self.l = ccp(self.l.x, -150);
     self.playing = NO;

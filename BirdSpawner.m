@@ -34,21 +34,21 @@
         NSInteger randomizer = arc4random() % (NSInteger)s;
         randomizer += s;
         
-        float speed = 1 + .5 * randomizer;
-        if (speed > 8) {
-            speed = 8;
+        float speed = 1 + randomizer;
+        if (speed > 15) {
+            speed = 15;
         }
         [self.delegate spawnBirdForTurtle:self.turtle withSpeed:speed];
         NSInteger countDownReduction = self.turtle.score;
-        countDownReduction *= 20;
-        if (countDownReduction > 800) {
-            countDownReduction = 800;
+        countDownReduction *= 50;
+        if (countDownReduction > 500) {
+            countDownReduction = 500;
         }
         if (countDownReduction < 2) {
             countDownReduction = 2;
         }
         NSInteger countDownRandom = arc4random() % countDownReduction;
-        self.countdown = 1000 - countDownRandom;
+        self.countdown = 600 - countDownRandom;
     }
 }
 
