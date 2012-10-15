@@ -12,7 +12,7 @@
 @implementation ChargingState
 
 - (void)tick {
-    self.turtle.charge++;
+    self.turtle.charge+= 2;
     if (self.turtle.charge >= self.turtle.maxCharge) {
         [self.turtle changeState:self.turtle.boosting];
     }

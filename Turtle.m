@@ -106,8 +106,10 @@
     if (reset) {
         self.mistakes = 0;
     }
-    self.l = ccp(self.l.x, -150);
+    self.l = ccp(self.l.x, -100);
     self.playing = NO;
+    self.charge = 0;
+    self.wantsToBoost = NO;
     self.sprite.position = self.l;
 }
 
