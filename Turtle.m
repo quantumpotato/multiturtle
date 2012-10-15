@@ -105,9 +105,9 @@
     }
     if (reset) {
         self.mistakes = 0;
-        self.playing = NO;
     }
     self.l = ccp(self.l.x, -150);
+    self.playing = NO;
     self.sprite.position = self.l;
 }
 
