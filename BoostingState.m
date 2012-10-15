@@ -20,7 +20,7 @@
 }
 
 - (float)speed {
-    return 15;
+    return 11;
 }
 
 - (void)touchDown {

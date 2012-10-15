@@ -97,6 +97,10 @@
         }
     }
     
+    for (Bird *b in finishedBirds) {
+        [b.sprite removeFromParentAndCleanup:YES];
+        b.sprite = nil;
+    }
     [self.birds removeObjectsInArray:finishedBirds];
 }
 
