@@ -14,6 +14,7 @@
 @property (strong, nonatomic) CCSprite *sprite;
 @property (nonatomic) CGPoint l;
 @property (nonatomic) float speed;
+@property (nonatomic) NSInteger turtleIndex;
 
 - (void)tick;
 - (void)resetForTurtle:(Turtle *)t;

@@ -30,13 +30,16 @@
 - (void)setupBirds {
     self.birds = [NSMutableArray array];
     for (int i = 0; i < 4; i++) {
-        Bird *b = [[Bird alloc] init];
-        [self.layer addChild:b];
-        float offX = arc4random() % 200;
-        offX += 800;
-        b.l = ccp(-offX, 768 - (100 * i));
-        b.speed = 3;
-        [self.birds addObject:b];
+        for (int ii = 0; ii < 2; ii++) {
+            Bird *b = [[Bird alloc] init];
+            [self.layer addChild:b];
+            float offX = arc4random() % 500;
+            b.turtleIndex = i;
+            offX += 600;
+            b.l = ccp(-offX - (ii*400), 750 - (140 * i));
+            b.speed = 3;
+            [self.birds addObject:b];
+        }
     }
 }
 
@@ -54,7 +57,7 @@
     
 }
 
-- (void)tick {
+- (void)turtleLoop {
     for (Turtle *t in self.turtles) {
         [t tick];
         if (t.l.y > 750) {
@@ -62,20 +65,28 @@
             t.score++;
         }
     }
-    for (int i = 0; i < 4; i++) {
+}
+
+- (void)birdLoop {
+    for (int i = 0; i < self.birds.count; i++) {
         Bird *b = self.birds[i];
         [b tick];
         if (b.l.x > 1100) {
-            [b resetForTurtle:self.turtles[i]];
+            [b resetForTurtle:self.turtles[b.turtleIndex]];
         }
         
         for (Turtle *t in self.turtles) {
-            if (GetDistance(b.l, t.l) < 50) {
+            if (t.playing && GetDistance(b.l, t.l) < 35) {
                 [t madeMistake];
             }
         }
-    
+        
     }
+}
+
+- (void)tick {
+    [self turtleLoop];
+    [self birdLoop];
 }
 
 - (NSInteger)score {

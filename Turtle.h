@@ -29,6 +29,8 @@
 @property (strong, nonatomic) CCSprite *cloud;
 @property (nonatomic) NSInteger playerNumber;
 
+@property (nonatomic) BOOL playing;
+
 - (void)tick;
 - (void)changeState:(TurtleState *)s;
 - (void)touchUp;

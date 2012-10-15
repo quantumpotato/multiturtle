@@ -12,6 +12,7 @@
 @synthesize sprite = _sprite;
 @synthesize l = _l;
 @synthesize speed = _speed;
+@synthesize turtleIndex = _turtleIndex;
 
 - (id)init {
     self = [super init];
@@ -44,11 +45,11 @@
     if (maxSpeed < 2) {
         maxSpeed = 2;
     }
-    if (maxSpeed > 17) {
-        maxSpeed = 17;
+    if (maxSpeed > 9) {
+        maxSpeed = 9;
     }
     self.speed = arc4random() % maxSpeed;
-    self.speed += 3;
+    self.speed += 4;
 }
 
 @end

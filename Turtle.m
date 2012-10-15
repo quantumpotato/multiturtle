@@ -21,6 +21,7 @@
 @synthesize mistakes = _mistakes;
 @synthesize cloud = _cloud;
 @synthesize playerNumber = _playerNumber;
+@synthesize playing = _playing;
 
 - (id)init {
     self = [super init];
@@ -66,10 +67,12 @@
 }
 
 - (void)tick {
-    self.cloud.position = self.l;
-    self.sprite.position = self.l;
-    self.l = ccp(self.l.x, self.l.y + [self.state speed]);
-    [self.state tick];
+    if (self.playing) {
+        self.cloud.position = self.l;
+        self.sprite.position = self.l;
+        self.l = ccp(self.l.x, self.l.y + [self.state speed]);
+        [self.state tick];
+    }
 }
 
 - (void)changeState:(TurtleState *)s {
@@ -77,7 +80,7 @@
 }
 
 - (NSInteger)maxCharge {
-    return 70;
+    return 110;
 }
 
 - (void)madeMistake {
@@ -89,9 +92,14 @@
         self.score = 0;
     }
     self.l = ccp(self.l.x, -150);
+    self.playing = NO;
+    self.sprite.position = self.l;
 }
 
 - (void)touchDown {
+    if (!self.playing) {
+        self.playing = YES;
+    }
     [self.state touchDown];
 }
 
