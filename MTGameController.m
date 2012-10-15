@@ -39,7 +39,7 @@
             s.delegate = self;
             s.turtle = self.turtles[i];
             s.countdown *= (ii + 1);
-            s.countdown += 300;
+            s.countdown += 100;
             [self.spawners addObject:s];
             [s release];
         }
