@@ -11,6 +11,7 @@
 @implementation MultiTurtleLayer
 @synthesize gc = _gc;
 @synthesize scoreLabel = _scoreLabel;
+@synthesize timer = _timer;
 
 +(CCScene *) scene {
 	CCScene *scene = [CCScene node];
@@ -24,10 +25,10 @@
     if (self) {
         self.gc = [[MTGameController alloc] initWithLayer:self];
         [self.gc start];
-        _timer = [NSTimer scheduledTimerWithTimeInterval:0.016 target:self selector:@selector(update) userInfo:nil repeats:YES];
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:0.016 target:self selector:@selector(update) userInfo:nil repeats:YES];
         [self setIsTouchEnabled:YES];
         self.scoreLabel = [CCLabelTTF labelWithString:@"" fontName:@"Courier New" fontSize:23];
-        self.scoreLabel.position =  ccp(12,1024-30);
+        self.scoreLabel.position =  ccp(514,700);
         [self.scoreLabel setAnchorPoint:ccp(0,0)];
         [self addChild:self.scoreLabel];
     }

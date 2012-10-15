@@ -12,6 +12,7 @@
 @interface MTGameController : NSObject
 
 @property (strong, nonatomic) CCLayer *layer;
+@property (strong, nonatomic) NSMutableArray *turtles;
 
 - (void)start;
 - (void)tick;

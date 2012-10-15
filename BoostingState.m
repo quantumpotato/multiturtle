@@ -13,15 +13,16 @@
 
 - (void)tick {
     if (self.turtle.charge > 0) {
-        self.turtle.charge-= 4;
+        self.turtle.charge-= 8;
         if (self.turtle.charge < 0) {
             self.turtle.charge = 0;
+            [self.turtle changeState:self.turtle.floating];
         }
     }
 }
 
 - (float)speed {
-    return 10;
+    return 13;
 }
 
 - (void)touchDown {

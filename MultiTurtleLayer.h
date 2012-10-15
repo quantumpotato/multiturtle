@@ -9,12 +9,11 @@
 #import "CCLayer.h"
 #import "MTGameController.h"
 
-@interface MultiTurtleLayer : CCLayer {
-    NSTimer *_timer;
-}
+@interface MultiTurtleLayer : CCLayer
 
 @property (strong, nonatomic) MTGameController *gc;
 @property (strong, nonatomic) CCLabelTTF *scoreLabel;
+@property (strong, nonatomic) NSTimer *timer;
 
 + (CCScene *)scene;
 

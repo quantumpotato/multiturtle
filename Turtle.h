@@ -27,6 +27,9 @@
 @property (nonatomic) NSInteger score;
 @property (nonatomic) NSInteger mistakes;
 
+- (void)tick;
 - (void)changeState:(TurtleState *)s;
+- (void)touchUp;
+- (void)touchDown;
 
 @end

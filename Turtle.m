@@ -22,7 +22,10 @@
 - (id)init {
     self = [super init];
     if (self) {
-        self.floating = [[FloatingState alloc] initWithTurtle:self];
+        self.floating   = [[FloatingState alloc] initWithTurtle:self];
+        self.charging   = [[ChargingState alloc] initWithTurtle:self];
+        self.boosting   = [[BoostingState alloc] initWithTurtle:self];
+        self.sprite = [[CCSprite alloc] initWithFile:@"turtlesmallsize1.png"];
         self.state = self.floating;
     }
     return self;
@@ -30,7 +33,7 @@
 
 - (void)tick {
     self.sprite.position = self.l;
-    self.l = ccp(self.l.x, self.l.y + self.speed);
+    self.l = ccp(self.l.x, self.l.y + [self.state speed]);
     [self.state tick];
 }
 
