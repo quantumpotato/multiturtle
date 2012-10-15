@@ -13,6 +13,7 @@
 
 @property (strong, nonatomic) CCLayer *layer;
 @property (strong, nonatomic) NSMutableArray *turtles;
+@property (strong, nonatomic) NSMutableArray *birds;
 
 - (void)start;
 - (void)tick;

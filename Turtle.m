@@ -65,7 +65,6 @@
     ccDrawCircle(self.l, percentage * maxRadius, 0, 100, NO);
 }
 
-
 - (void)tick {
     self.cloud.position = self.l;
     self.sprite.position = self.l;
@@ -73,13 +72,23 @@
     [self.state tick];
 }
 
-
 - (void)changeState:(TurtleState *)s {
     self.state = s;
 }
 
 - (NSInteger)maxCharge {
     return 70;
+}
+
+- (void)madeMistake {
+    if (self.score > self.mistakes) {
+        self.mistakes++;
+    }
+    self.score -= self.mistakes;
+    if (self.score < 0) {
+        self.score = 0;
+    }
+    self.l = ccp(self.l.x, -150);
 }
 
 - (void)touchDown {

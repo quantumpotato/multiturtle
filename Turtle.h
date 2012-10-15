@@ -33,5 +33,6 @@
 - (void)changeState:(TurtleState *)s;
 - (void)touchUp;
 - (void)touchDown;
+- (void)madeMistake;
 
 @end
